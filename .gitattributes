@@ -1,0 +1,41 @@
+# ===========================
+# GitHub Linguist Overrides
+# ===========================
+
+# Ignore Jupyter Notebooks in language statistics
+*.ipynb linguist-documentation=true
+
+# Treat JSON/YAML as data, not source code
+*.json linguist-detectable=false
+*.yaml linguist-detectable=false
+*.yml  linguist-detectable=false
+
+# Ignore dataset and processed model files
+data/** linguist-documentation=true
+*.h5   linguist-detectable=false
+*.hdf5 linguist-detectable=false
+*.save linguist-detectable=false
+*.keras linguist-detectable=false
+*.joblib linguist-detectable=false
+*.pkl linguist-detectable=false
+*.csv linguist-documentation=true
+
+# Mark backend directories as Python code
+backend/** linguist-language=Python
+
+# Mark collectors as Python/JS explicitly
+collectors/*.py linguist-language=Python
+collectors/*.js linguist-language=JavaScript
+
+# Mark frontend as JavaScript+CSS
+frontend/** linguist-language=JavaScript
+client/** linguist-language=JavaScript
+
+# Ignore build/dist/output folders
+dist/** linguist-vendored=true
+build/** linguist-vendored=true
+node_modules/** linguist-vendored=true
+
+# Ignore Docker and CI artifacts
+.dockerignore linguist-generated=true
+.github/**    linguist-generated=true
