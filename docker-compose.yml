@@ -1,0 +1,35 @@
+services:
+  mysql:
+    image: mysql:8.0
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      MYSQL_ROOT_PASSWORD: atharva123
+      MYSQL_DATABASE: cyberdefense
+      MYSQL_USER: cyber
+      MYSQL_PASSWORD: cyberpass
+    ports:
+      - "${DATABASE_PORT}:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./db_init.sql:/docker-entrypoint-initdb.d/db_init.sql:ro
+
+  web:
+    build: .
+    working_dir: /app
+    command: ["python", "-m", "backend.app"]
+    depends_on:
+      - mysql
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - FLASK_ENV=development
+    ports:
+      - "${FLASK_RUN_PORT}:5000"
+    volumes:
+      - .:/app:cached
+
+volumes:
+  db_data:

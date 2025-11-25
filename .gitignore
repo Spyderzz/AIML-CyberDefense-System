@@ -1,0 +1,91 @@
+##############################
+# ENVIRONMENT & SECRETS
+##############################
+.env
+.env.*
+*.env
+!backend/.env
+!.env.example
+
+##############################
+# PYTHON
+##############################
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.pickle
+*.joblib
+*.npy
+*.npz
+venv/
+env/
+.venv/
+
+##############################
+# FLASK / BACKEND
+##############################
+instance/
+db_data/
+*.db
+*.sqlite
+*.sqlite3
+
+##############################
+# NODE / FRONTEND
+##############################
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+frontend_build/
+dist/
+build/
+*.tsbuildinfo
+
+##############################
+# LOGS & TEMP FILES
+##############################
+logs/
+*.log
+tmp/
+tmp_payload.json
+*.tmp
+*.pid
+coverage/
+
+##############################
+# OS / EDITOR FILES
+##############################
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+.cache/
+
+##############################
+# DATA & LARGE ARTIFACT CONTROL
+##############################
+# Keep empty folders only via .gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Exclude everything else in data folder
+data/
+data/*
+
+# BUT keep README if present
+
+# Model & dataset file types to always ignore
+*.save
+*.csv
+*.json
+*.h5
+*.keras
+*.joblib
+*.pkl
+*.npz
+*.npy
