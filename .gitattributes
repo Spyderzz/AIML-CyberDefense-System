@@ -27,9 +27,6 @@ backend/** linguist-language=Python
 collectors/*.py linguist-language=Python
 collectors/*.js linguist-language=JavaScript
 
-# Mark frontend as JavaScript+CSS
-frontend/** linguist-language=JavaScript
-client/** linguist-language=JavaScript
 
 # Ignore build/dist/output folders
 dist/** linguist-vendored=true

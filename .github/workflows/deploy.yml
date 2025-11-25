@@ -13,9 +13,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./frontend
 
     steps:
       - name: Checkout repository
@@ -29,9 +26,11 @@ jobs:
           cache-dependency-path: frontend/package-lock.json
 
       - name: Install frontend dependencies
+        working-directory: ./frontend
         run: npm ci
 
       - name: Build project (Vite)
+        working-directory: ./frontend
         run: |
           echo "GH_PAGES=true" >> $GITHUB_ENV
           npm run build
@@ -39,7 +38,7 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: frontend/dist  
 
   deploy:
     needs: build
@@ -47,5 +46,4 @@ jobs:
 
     steps:
       - name: Deploy to GitHub Pages
-        id: deploy
         uses: actions/deploy-pages@v4
