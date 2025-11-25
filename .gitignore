@@ -74,17 +74,10 @@ Thumbs.db
 !data/processed/.gitkeep
 
 # Exclude everything else in data folder
-data/
-data/*
-
-# BUT keep README if present
+data/processed/*
 
 # Model & dataset file types to always ignore
-*.save
 *.csv
-*.json
-*.h5
-*.keras
 *.joblib
 *.pkl
 *.npz

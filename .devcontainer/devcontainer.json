@@ -1,0 +1,10 @@
+{
+  "name": "AIML CyberDefense Dev Container",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:0-3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+  },
+  "postCreateCommand": "pip install -r backend/requirements.txt || true",
+  "forwardPorts": [5000, 3000],
+  "remoteUser": "vscode"
+}

@@ -1,0 +1,14 @@
+{
+  "rf_weight": 0.7,
+  "lstm_weight": 0.3,
+  "method": "weighted_avg",
+  "threshold": 0.5,
+  "n_sequences_test": 197706,
+  "rf_seq_shape": [
+    197706
+  ],
+  "lstm_seq_shape": [
+    197706
+  ],
+  "created_at": "2025-11-15T22:17:22.162112Z"
+}

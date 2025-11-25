@@ -1,0 +1,24 @@
+{
+  "seq_len": 8,
+  "feat_dim": 9,
+  "model_file": "./data/processed/mouse_lstm.h5",
+  "scaler_file": "./data/processed/mouse_lstm_scaler.save",
+  "train_shape": [
+    808415,
+    8,
+    9
+  ],
+  "test_shape": [
+    197706,
+    8,
+    9
+  ],
+  "class_counts_train": {
+    "0": 496461,
+    "1": 311954
+  },
+  "class_counts_test": {
+    "0": 135597,
+    "1": 62109
+  }
+}

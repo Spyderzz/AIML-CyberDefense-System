@@ -1,381 +1,279 @@
-# 🚨 AIML-CyberDefense-System  
-### **AI + Machine Learning based Intelligent Cyber Defense System**  
-![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
-![Flask](https://img.shields.io/badge/Flask-Backend-black)
-![React](https://img.shields.io/badge/React-Frontend-61dafb.svg)
-![Vite](https://img.shields.io/badge/Vite-Bundler-purple)
-![Socket.IO](https://img.shields.io/badge/Socket.IO-Realtime-333333.svg)
-![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)
-![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+# AIML-CyberDefense-System
+
+<p align="center">
+  
+</p>
+
+<p align="center">
+  <b>An AI-Driven Cyber Defense Platform combining Network Flow Machine Learning, Behavioral Biometrics, and Real-Time Threat Intelligence for autonomous intrusion detection.</b>
+</p>
+
+<p align="center">
+  <img alt="Static Badge" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&labelColor=black">
+
+  <img alt="Static Badge" src="https://img.shields.io/badge/Flask-3BABC3?style=for-the-badge&logo=flask&labelColor=black">
+
+
+  <img alt="Static Badge" src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&labelColor=black">
+
+
+ <img alt="Static Badge" src="https://img.shields.io/badge/Socket.io-3C4142?style=for-the-badge&logo=socketdotio&labelColor=black">
+
+ <img alt="Static Badge" src="https://img.shields.io/badge/MYSQL-4479A1?style=for-the-badge&logo=mysql&labelColor=black">
+ <img alt="Static Badge" src="https://img.shields.io/badge/SQL Alchemy-D71F00?style=for-the-badge&logo=sqlalchemy&labelColor=black">
+
+<img alt="Static Badge" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&labelColor=black">
+<img alt="Static Badge" src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&labelColor=black">
+<img alt="Static Badge" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&labelColor=black">
+<img alt="Static Badge" src="https://img.shields.io/badge/CSS-663399?style=for-the-badge&logo=css&labelColor=black">
+<img alt="Static Badge" src="https://img.shields.io/badge/chart.js-FF6384?style=for-the-badge&logo=chartdotjs&labelColor=black">
+
+  <img src="https://img.shields.io/badge/Docker-2496ED?logo=docker&style=for-the-badge&labelColor=black"/>
+  
+</p>
 
 ---
 
-## 📌 **1. Project Overview**
-**AIML-CyberDefense-System** is a full-stack AI-powered cyber defense platform that detects **network intrusions (DDoS, Botnet, SYN Floods)** and **human vs bot behavior** using:
+# [![Open in GitHub Codespaces](https://img.shields.io/badge/Open%20in-Github%20Codespaces-blue?style=for-the-badge&logo=github&logoColor=white)](https://github.com/codespaces/new?repo=Spyderzz/AIML-CyberDefense-System&ref=main)
 
-- **ML models on Network Flow Data**  
-- **Behavioral Biometrics via Mouse Dynamics**  
-- **Real-Time Event Streaming (Socket.IO)**  
-- **Automated Flow Collector**  
-- **Rate-Limit + Automation Detection Engine**
+<p align="center">
 
-This system demonstrates modern cybersecurity research principles by integrating **machine learning, real-time data processing, human-behavior analysis, and full-stack engineering**.
 
----
 
-## 🧠 **2. Core Features**
 
-### 🔹 **A. Network Intrusion Detection (Flow-Based ML)**
-- Random Forest
-- XGBoost Booster Model
-- Preprocessing pipeline
-- Flow sliding-window engine
-- Real-time threat alerts via SocketIO
+## ***Overview***
 
-### 🔹 **B. Mouse Dynamics Behavioral Detection**
-Detect whether the visitor is:
-- 🤖 **Bot**
-- 🧑 **Human**
-Using:
-- RF classifier on 20 handcrafted features  
-- LSTM deep-learning model  
-- Ensemble prediction + hysteresis windowing  
-
-### 🔹 **C. Real-Time Dashboard**
-- Live flow chart  
-- Alerts panel  
-- Model confidence values  
-- Mouse trajectory visualization  
-- System health monitor  
-
-### 🔹 **D. Security System**
-- Rate limiting  
-- IP window blocking  
-- Automation detection (Selenium, Puppeteer, Playwright)  
-- JWT Authentication (Access + Refresh tokens)  
-- Password hashing with bcrypt  
-- Refresh token revocation  
-
-### 🔹 **E. Frontend (React + Vite)**
-- Modern UI  
-- Auth pages  
-- Dashboard  
-- Live streaming visualizer  
-- Notifications + toast alerts  
-
-### 🔹 **F. Backend (Flask + Socket.IO)**
-- Robust REST APIs  
-- Auto-injected event collector scripts  
-- Database models  
-- Logging & exception handling  
-- Modular blueprint routing  
+A unified AI/ML cyber-defense system that detects DDoS attacks and automated bots using a dual pipeline of network-flow machine learning (RF + XGBoost) and mouse-dynamics behavioral biometrics (RF + LSTM). It features a secure Flask backend with JWT auth, real-time Socket.IO alerts, and MySQL logging, delivering a low-latency, multi-modal defense layer against modern network threats and automated attacks.
 
 ---
 
-## 🏗 **3. System Architecture**
+## ***Key Capabilities***
 
-```
-                    ┌───────────────────────┐
-                    │      FRONTEND (UI)     │
-                    │ React + Vite + Charts │
-                    └─────────────┬─────────┘
-                                  │ HTTPS/WS
-                           Socket.IO + REST API
-                                  │
-                    ┌─────────────┴─────────────┐
-                    │        BACKEND API         │
-                    │ Flask + Socket.IO Server  │
-                    ├─────────────┬─────────────┤
-                    │Authentication│ML Prediction│
-                    └───────┬─────┴──────┬──────┘
-                            │             │
-                   ┌────────┘   ┌────────┘
-                   ▼            ▼
-           ML Flow Models   Mouse Dynamics Engine
-          (RF, XGB, Scaler) (RF, LSTM, Ensemble)
-                   │            │
-                   └──────┬─────┘
-                          ▼
-               Real-Time Alerts + Logging
-                          │
-                   SQL Database (MySQL)
-```
+**Flow-Based Intrusion Detection** using Random Forest + XGBoost ensemble.
+
+**Behavioral Biometrics (Mouse Dynamics)** with RF + LSTM hybrid modeling.
+
+**Real-Time Threat Alerts** via Socket.IO dashboard.
+
+**Adaptive Rate Limiting & IP Blocking** using sliding-window analysis.
+ 
+**Automation Detection** for Selenium, Puppeteer, and Playwright bots.
+
+**Secure Backend Architecture** with Flask, JWT auth, and bcrypt hashing.
+
+**MySQL Data Persistence** for flows, behavioral events, and predictions.
+
+**Modular, Low-Latency Pipeline** optimized for real-time cyber defense.
 
 ---
 
-## 🗂 **4. Folder Structure**
+## ***System Architecture***
 
-```
-AIML-CyberDefense-System/
-│
-├── backend/
-│   ├── app.py
-│   ├── auth.py
-│   ├── mouse_model.py
-│   ├── db.py
-│   ├── routes/
-│   ├── static/
-│   │   ├── flow_report.js
-│   │   ├── index.html
-│   │   └── blocked.html
-│   ├── templates/
-│   ├── models/
-│   └── requirements.txt
-│
-├── frontend/
-│   ├── src/
-│   ├── vite.config.js
-│   ├── package.json
-│   └── dist/ (GitHub Pages build)
-│
-├── data/
-│   ├── raw/
-│   └── processed/
-│
-├── .env.example
-├── Dockerfile
-├── docker-compose.yml  (optional)
-└── README.md
-```
+<p align="center">
+  <img src="./assets/SystemArchi.png" width="850" style="border-radius:10px;">
+</p>
 
 ---
 
-## 🔧 **5. Technology Stack**
+## ***Technology Stack***
 
-### **Frontend**
-- React 18  
-- Vite  
-- Socket.IO Client  
-- Zustand  
-- Chart.js  
-- Custom Mouse Visualizer  
+#### **Backend**
+<p>
+<img src="https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge&logo=python"/>
+  <img src="https://img.shields.io/badge/Flask-API-blue?style=for-the-badge&logo=flask"/>
+  <img src="https://img.shields.io/badge/SocketIO-Realtime-010101?style=for-the-badge&logo=socketdotio"/>
+  <img src="https://img.shields.io/badge/Flask--CORS-Cross%20Origin-blue?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Flask--Limiter-Rate%20Limit-orange?style=for-the-badge"/>
+    <img src="https://img.shields.io/badge/Json web token-authentication-013243?style=for-the-badge&logo=jsonwebtokens"/>
 
-### **Backend**
-- Python 3.11  
-- Flask  
-- Flask-SocketIO  
-- SQLAlchemy  
-- JWT  
-- bcrypt  
-- Limiter  
-- Requests  
-- Eventlet  
+</p>
 
-### **Machine Learning**
-- Scikit-Learn  
-- XGBoost  
-- TensorFlow/Keras (LSTM model)  
-- NumPy, Pandas  
-- Joblib  
+#### **Machine Learning**
+<p>
+  
+  <img src="https://img.shields.io/badge/Scikit--Learn-RandomForest-FFCA28?style=for-the-badge&logo=scikitlearn&logoColor=black"/>
+  <img src="https://img.shields.io/badge/XGBoost-Booster-FF6F00?style=for-the-badge&logo=xgboost"/>
+  <img src="https://img.shields.io/badge/TensorFlow-LSTM-FF6F00?style=for-the-badge&logo=tensorflow"/>
+  <img src="https://img.shields.io/badge/Keras-Deep%20Learning-D00000?style=for-the-badge&logo=keras"/>
+  <img src="https://img.shields.io/badge/NumPy-Numerical-013243?style=for-the-badge&logo=numpy"/>
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?style=for-the-badge&logo=pandas"/>
+  <img src="https://img.shields.io/badge/Joblib-Model%20Serialization-gray?style=for-the-badge&logo=googlecampaignmanager360"/>
+ 
+</p>
 
-### **DevOps**
-- Docker-ready  
-- GitHub Pages deployment for frontend  
-- GitHub Actions CI/CD (optional)
+#### **Frontend**
+<p>
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/Vite-Bundler-BB00FF?style=for-the-badge&logo=vite"/>
+  <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
+  <img src="https://img.shields.io/badge/Zustand-State%20Manager-black?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Chart.js-Visualizations-FF6384?style=for-the-badge&logo=chartdotjs"/>
+  
+  <img src="https://img.shields.io/badge/HTML5-Markup-E34F26?style=for-the-badge&logo=html5"/>
+  <img src="https://img.shields.io/badge/CSS-Styling-1572B6?style=for-the-badge&logo=css"/>
+  <img src="https://img.shields.io/badge/Socket.IO-Client-010101?style=for-the-badge&logo=socketdotio"/>
+  <img src="https://img.shields.io/badge/Toast%20System-Notifications-orange?style=for-the-badge"/>
+  
+</p>
+
+#### **Database**
+
+<p>
+  <img src="https://img.shields.io/badge/MySQL-9%20-4479A1?style=for-the-badge&logo=mysql"/>
+  <img src="https://img.shields.io/badge/SQLalchemy-ORM-D00000?style=for-the-badge&logo=sqlalchemy"/>
+  <img src="https://img.shields.io/badge/PyMySQL-Driver-4479A1?style=for-the-badge&logo=mysql"/>
+</p>
+
+#### **DevOps**
+<p>
+  <img src="https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker"/>
+  <img src="https://img.shields.io/badge/wireshark-packet sniffer-1679A7?style=for-the-badge&logo=wireshark"/>
+ <img src="https://img.shields.io/badge/nodejs-server runner-success?style=for-the-badge&logo=nodedotjs"/>
+  <img src="https://img.shields.io/badge/GitHub%20Pages-Frontend%20Deploy-blue?style=for-the-badge&logo=github"/>
+  <img src="https://img.shields.io/badge/GitHub%20Actions-CI/CD-2088FF?style=for-the-badge&logo=githubactions"/>
+  <img src="https://img.shields.io/badge/Reverse%20Proxy-NGINX-success?style=for-the-badge&logo=nginx"/>
+</p>
+
+
 
 ---
 
-## 🧪 **6. ML Models Overview**
+## ***Machine Learning Models***
 
-### **➡ Flow Models**
+#### **Flow-Based Models**
 | Model | Purpose | File |
-|-------|---------|-------|
+|-------|---------|------|
 | Random Forest | Baseline binary classifier | `rf_model.save` |
-| XGBoost | Final booster | `xgb_model.json` |
-| Scaler | Standardization | `scaler_used.save` |
-| Label Encoder | Multiclass mapping | `label_encoder.save` |
+| XGBoost | Final booster model | `xgb_model.json` |
+| Scaler | Feature normalization | `scaler_used.save` |
+| Label Encoder | Attack label encoding | `label_encoder.save` |
 
-### **➡ Mouse Dynamics Models**
+#### **Mouse Dynamics Models**
 | Model | Purpose | File |
 |--------|----------|--------|
-| RF | Feature-based classification | `mouse_rf.save` |
-| LSTM | Sequential deep model | `mouse_lstm.h5` / `.keras` |
-| Scaler | Normalization | `mouse_lstm_scaler.save` |
-| Ensemble Meta | Weight tuning | `mouse_ensemble_meta.json` |
+| RF Classifier | Handcrafted feature classifier | `mouse_rf.save` |
+| LSTM Model | Temporal sequence model | `mouse_lstm.keras` |
+| Scaler | LSTM normalization | `mouse_lstm_scaler.save` |
+| Ensemble Meta | Hybrid weighting | `mouse_ensemble_meta.json` |
+
+#### **Datasets Used**
+[*CIC-IDS 2017 DDoS Dataset*](https://www.kaggle.com/datasets/sampadab17/cicids2017)
+
+[*Balabit Mouse Dynamics Dataset*](https://www.kaggle.com/datasets/gvkrishnakireeti/balabit-dataset)
+
+[*ISiT Mouse Dynamics Dataset*](https://onlineacademiccommunity.uvic.ca/isot/2022/11/27/behavioral-biometric-datasets/)
 
 ---
 
-## 🧪 **7. Dataset Information**
+## ***Local Installation***
 
-### **Flow-Based ML Dataset**
-- ISCX / CICIDS 2017/2018  
-- Custom cleaned CSVs  
-- Reduced features + label balancing  
-
-### **Mouse Dynamics**
-- **ISIT 2024 Bits & Bots dataset**  
-- **Balabit refined dataset (scroll behavior)**  
-- Custom preprocessing scripts  
-- 20 handcrafted features (speed, acceleration, angles, pauses, curvature…)
-
----
-
-## 🛠 **8. Installation & Setup**
-
-### 1️⃣ Clone the repository
+#### **Clone Repo (bash)**
 ```bash
 git clone https://github.com/Spyderzz/AIML-CyberDefense-System
 cd AIML-CyberDefense-System
 ```
 
-### 2️⃣ Backend Setup
+#### **Loading ML Models**
+
+[![Download Models](https://img.shields.io/badge/Download-Pretrained%20Models-blue?style=for-the-badge&logo=github)](https://github.com/<username>/<repo>/releases/download/v1.0-models/data_processed.zip)
+
+Download pre-trained models and place them in `./data/processed` or run bash:
 ```bash
+curl -L -o data_processed.zip "https://github.com/<username>/<repo>/releases/download/v1.0-models/data_processed.zip"
+unzip data_processed.zip -d data/processed
+```
+
+
+
+
+
+#### **Backend Setup**
+```powershell
 cd backend
 python -m venv venv
-venv/Scripts/activate
+venv/Scripts/activate   # Windows
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Frontend Setup
-```bash
+#### **Frontend Setup**
+```powershell
 cd frontend
 npm install
 npm run dev
 ```
 
-### 4️⃣ Environment Variables
-Create file:
-
-`.env` (NOT uploaded)
-
+#### **Environment File**
+Create `.env`  using this powershell cmd:
+```powershell
+Copy-Item .env.example -Destination .env
 ```
-SECRET_KEY=
-DATABASE_USER=
-DATABASE_PASSWORD=
-DATABASE_NAME=cyberdefense
-FRONTEND_ORIGIN=http://localhost:3000
-FLOWCOLLECTOR_TOKEN=
-```
-
-### Use `.env.example` as reference.
 
 ---
 
-## 🚀 **9. Build Frontend for GitHub Pages**
+## ***Build Frontend for GitHub Pages***
 
+#### **1️⃣ Add homepage to package.json**
+```json
+"homepage": "https://<your-username>.github.io/<repo-name>"
+```
+
+#### **2️⃣ Install GH Pages**
 ```bash
-cd frontend
-npm run build
+npm install --save-dev gh-pages
 ```
 
-The output goes into:  
-`frontend/dist/`
+#### **3️⃣ Add deploy scripts**
+```json
+"scripts": {
+  "build": "vite build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+```
 
-This is deployed automatically via GitHub Pages using workflow:
-
-`.github/workflows/deploy.yml`
-
----
-
-## 🐋 **10. Docker Deployment**
-
-### **Build the container**
+#### **4️⃣ Deploy**
 ```bash
-docker build -t aiml-cyberdefense .
+npm run deploy
 ```
 
-### **Run**
+---
+
+## ***Docker Deployment***
+
+#### **Build**
 ```bash
-docker run -p 5000:5000 aiml-cyberdefense
+docker build -t aiml-cyberdefense-system .
 ```
 
----
-
-## ⚙ **11. Backend API Summary**
-
-### **POST /api/predict_flow**
-Predict intrusion using flow features.
-
-### **POST /api/predict_mouse**
-Predict human/bot from mouse events.
-
-### **POST /api/collect_mouse**
-Record + predict in real time.
-
-### **POST /api/predict_combined**
-Ensemble of flow + mouse.
-
-### **Auth Endpoints**
-`/auth/register`  
-`/auth/login`  
-`/auth/refresh`  
-`/auth/logout`
-
----
-
-## 🔐 **12. Security Features**
-- bcrypt hashing  
-- JWT-based auth  
-- Rate limiting  
-- IP-based sliding window  
-- Auto block/unblock  
-- Automation detection (Selenium, Puppeteer, Playwright)  
-- CSRF-safe design  
-- No sensitive data in GitHub (via .gitignore)
-
----
-
-## 📦 **13. .gitignore (Key Entries)**
-
+#### **Run**
+```bash
+docker run -p 5000:5000 aiml-cyberdefense-system
 ```
-# Environment
-.env
-*.env
+---
 
-# Models
-*.h5
-*.keras
-*.joblib
-*.save
-*.pkl
-
-# Datasets
-data/raw/*
-data/processed/*
-
-# Node
-node_modules/
-dist/
-
-# Python
-__pycache__/
-*.pyc
-```
+## ***Security Features***
+- Behavior-driven bot detection  
+- Adaptive sliding-window IP rate limiting  
+- Auto-blocking suspicious clients  
+- Automation fingerprint detection  
+- JWT access/refresh tokens  
+- BCrypt hashing with cost upgrade  
 
 ---
 
-## 📝 **14. License**
-This project is licensed under the **MIT License**.  
-You are free to use, modify, and distribute it with attribution.
+## ***License***
+**MIT License** — free for academic, research, and commercial use.
 
 ---
 
-## 🤝 **15. Contributing**
-Pull requests and improvements are welcome.  
-Feel free to open issues for:
+## ***Author***
+**Atharva**   
 
-- Bug reports  
-- Feature requests  
-- Model improvements  
-- Optimization suggestions  
+[![GitHub Profile](https://img.shields.io/badge/GitHub-Spyderzz-181717?style=for-the-badge&logo=github)](https://github.com/Spyderzz)
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Atharva-blue?style=for-the-badge&logo=inspire)](https://www.linkedin.com/in/ar07xd)
 
 ---
 
-## ⭐ **16. Author**
-**Atharva Rathore**  
-B.Tech Student – AI/ML & Cyber Security  
-GitHub: https://github.com/Spyderzz  
-Project: **AIML-CyberDefense-System**
 
----
-
-## 🎉 **17. Acknowledgements**
-- ISIT 2024 Bits & Bots Dataset  
-- CICIDS 2017 / 2018  
-- Balabit Mouse Dynamics Dataset  
-- Flask, React, Vite Teams  
-- scikit-learn, XGBoost, TensorFlow  
-
----
-
-# 🚀 **Feel free to star ⭐ the project if you like it!**
+## ⭐ If you liked this project, don’t forget to star the repo!
